@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A-Books</title>
+  <link rel="stylesheet" href="CSS/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-success navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">A-Books</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/books.html">BOOKS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">CONTACT-US</a>
+          </li>
+
+
+        </ul>
+        <form class="d-flex">
+          <a href="cart.html" class="btn btn-outline-info"><i class="fa-solid fa-cart-shopping text-white"></i></a>
+          <a data-bs-toggle="modal" data-bs-target="#sign_up" class="btn btn-outline-info mx-3 text-white"
+            type="submit">Sign-Up</a>
+          <a data-bs-toggle="modal" data-bs-target="#login" class="btn btn-outline-info text-white me-4"
+            type="submit">Login</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Pop-Up -->
+
+  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-info-subtle">
+        <div class="modal-header">
+          <div class="text-center">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Login Here</h1>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="form-signin">
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""
+              autofocus="" fdprocessedid="4ea5wa"> <br>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required=""
+              fdprocessedid="12do2">
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label><br> <br>
+              <a class="mx-auto d-flex" href="">Forgot Password</a>
+
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Page End -->
+
+
+
+
+  <!-- Sign-Up Pop-Up -->
+  <div class="modal fade" id="sign_up" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content bg-info-subtle">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 h1" id="exampleModalLabel">Sign-Up Here</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Enter Full Name:</label>
+              <input type="text" class="form-control">
+            </div>
+
+
+
+
+            <div class="mb-3">
+              <label class="form-label">Enter Mobile No: </label>
+              <input type="number" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Enter Address: </label>
+              <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Enter Email: </label>
+              <input type="email" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Enter Password: </label>
+              <input type="password" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Re-Enter Password: </label>
+              <input type="password" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Select Your Course:</label>
+              <select name="course" id="course">
+                <option value="BCA 1st year">BCA 1st year</option>
+                <option value="BCA 2nd year">BCA 2nd year</option>
+                <option value="BCA 3rd year">BCA 3rd year</option>
+                <option value="MCA 1st year">MCA 1st year</option>
+                <option value="MCA 2nd year">MCA 2nd year</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Select Gender:</label> <br>
+              <input type="radio" id="male" name="gender" value="MALE">
+              <label for="male">Male</label><br>
+              <input type="radio" id="female" name="gender" value="FEMALE">
+              <label for="female">Female</label><br>
+              <input type="radio" id="other" name="gender" value="Other">
+              <label for="other">Other</label>
+            </div>
+
+
+
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <a href="/books.html" class="btn btn-success" type="submit">Sign-Up</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sign-Up Page End -->
+
+
+  <!-- Hero Section -->
+  <section class="first-section pt-5">
+    <div class="container ">
+      <div class="row">
+        <div class="col-sm pt-4">
+          <h1 class="h1 display-3 text-center text-success"><b>Welcome to My Online Book-Store</b> </h1>
+          <h3 class="h5 text-center pt-3">Hello Guys! Here you can read <br> different types of book fully free</h3>
+          <br>
+          <p>“That's the thing about books. They let you travel without moving your feet.” <i>– Jhumpa Lahiri,</i>
+            <B>The Namesake</B></p>
+          <p>“A reader lives a thousand lives before he dies.” <i>– George R. R. Martin,</i> <b> A Dance with
+              Dragons</b></p>
+
+        </div>
+        <div class="col-sm mt-3">
+          <img src="image/book.gif" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="container mt-5">
+
+  <!-- Available Books -->
+  <section class="section-two py-3 " id="">
+    <div class="container ">
+      <div class="row">
+        <h1 class="h1 text-center text-success"><u>Books Available</u> </h1>
+      </div>
+      <div class="row">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="img-fluid" src="/image/html.jpg" alt="">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class=" justify-content-between align-items-center">
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
+                    data-bs-target="#card1">Read More</button>
+                  <a href="/books.html"><button type="button" class="btn btn-sm btn-success">Buy Now</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal for Card 1 -->
+          <div class="modal fade" id="card1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="card-1">HTML Tutorial</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h5>What is HTML?</h5>
+                  <p>HTML is the language for describing the structure of Web pages. HTML gives authors the means to:
+                  </p>
+                  <ul>
+                    <li>Publish online documents with headings, text, tables, lists, photos, etc.</li>
+                    <li>Retrieve online information via hypertext links, at the click of a button.</li>
+                    <li>Design forms for conducting transactions with remote services, for use in searching for
+                      information, making reservations, ordering products, etc.</li>
+                    <li>Include spread-sheets, video clips, sound clips, and other applications directly in their
+                      documents.</li>
+                  </ul>
+                  <p>With HTML, authors describe the structure of pages using markup. The elements of the language label
+                    pieces of content such as “paragraph,” “list,” “table,” and so on.</p>
+                  <br>
+                  <h5>What is XHTML?</h5>
+                  <p>XHTML is a variant of HTML that uses the syntax of XML, the Extensible Markup Language. XHTML has
+                    all the same elements (for paragraphs, etc.) as the HTML variant, but the syntax is slightly
+                    different. Because XHTML is an XML application, you can use other XML tools with it (such as XSLT, a
+                    language for transforming XML content).</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="img-fluid" src="/image/css.jpg" alt="">
+              <div class="card-body ">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class=" justify-content-between align-items-center">
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
+                    data-bs-target="#card2">Read More</button>
+                  <a href="/books.html"><button type="button" class="btn btn-sm btn-success">Buy Now</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal for card2 -->
+
+          <div class="modal fade" id="card2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="card-1">CSS Tutorial</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h5>What is CSS?</h5>
+                  <p>CSS stands for Cascading Style Sheets. It is a style sheet language which is used to describe the
+                    look and formatting of a document written in markup language. It provides an additional feature to
+                    HTML. Its major uses are:
+                  </p>
+                  <ul>
+                    <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media.</li>
+                    <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</li>
+                    <li>A cascading style sheet can be used with JavaScript and HTML in most of the websites to develop
+                      user interfaces for a lot of mobile applications and user interfaces for various web applications.
+                    </li>
+                    <li>We can specify CSS once and reuse the same sheet within various HTML pages.</li>
+                  </ul>
+                  <p>If anyone wants to begin a career in web designing professionally, it is essential to have
+                    knowledge of CSS and HTML.</p>
+                  <br>
+                  <h5>Types of CSS:</h5>
+                  <ol type="i">
+                    <li>Inline CSS</li>
+                    <li>Internal CSS</li>
+                    <li>External CSS</li>
+                  </ol>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col">
+            <div class="card shadow-sm ">
+              <img class="img-fluid" src="/image/power-BI.jpg" alt="">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="justify-content-between align-items-center">
+                  <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
+                    data-bs-target="#card3">Read More</button>
+                  <a href="/books.html"> <button type="button" class="btn btn-sm btn-success">Buy Now</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Model for card 3 -->
+          <div class="modal fade" id="card3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="card-1">Power BI Tutorial</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h5>What is Power BI?</h5>
+                  <p>Microsoft’s Power Business Intelligence and visualization tool (Power BI) is a cloud-based
+                    collection of apps, software, and connectors that aggregates, contextualizes, and interprets raw
+                    business data into an interactive visual dashboard. Some features of this tool are:
+                  </p>
+                  <ul>
+                    <li>Direct connectivity to Excel and easily integrates with other Microsoft products.</li>
+                    <li>Ability to compress data and extract insight from large datasets – up to 100 million rows as
+                      opposed to just over 1 million for Excel.</li>
+                    <li>Enabling users to re-use datasets across multiple platforms and reports (Pro and Premium
+                      versions).</li>
+                    <li>An adaptive and friendly user experience. Through its active and dynamic online community,
+                      Microsoft listens to user input and adapts Power BI accordingly with monthly updates.</li>
+                  </ul>
+                  <p>Power BI is robust, powerful (up to 100 million rows of data), and it turns raw data into elegant
+                    and easy-to-understand visuals that will empower an organization to make informed decisions to usher
+                    in the future.</p>
+                  <br>
+                  <h5>Why Power BI is Different?</h5>
+                  <p>Business leaders have multiple business intelligence tools to choose from, so why do 97 percent of
+                    them use Power BI? Of course, Power BI provides reports. In fact, with just a few clicks, any user
+                    can generate dynamic reports. But, it also features data discovery, data transformation, and perhaps
+                    most importantly, data modeling.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <hr class="container mt-5">
+
+
+  <!-- Contact Us -->
+  <section class="contact pt-4" id="contact">
+    <div class="container">
+      <div class="row">
+        <div id="fifth" class="contact">
+          <h1 class="h1 text-center text-success"><u>Contact Us</u> </h1>
+
+
+          <p>Can't find the solution you're looking for? </p>
+          <p>We would love to hear from you! Please don't hesitate to reach out if you have any questions or concerns.
+          </p>
+          <p><b><u>Customer Service</u></b></p>
+          <p>E-mail:amarkumarpathak2004@gmail.com</p>
+          <p>Address: KL University ,Green Fields, Vaddeswaram, Andhra Pradesh 522302</p>
+          <P><b>Note:</b> We currently don't offer suppport by phone.</P>
+          <p><b><u>Social Media</u></b></p>
+          <p>Follow us on Facebook, Twitter, and Instagram for updates, promotions, and book recommendations. The
+            handles are given below.</p>
+          <p><b><u>Mailing Address</u></b></p>
+          <p>If you prefer to send us mail, our mailing address is:</p>
+          <pre>
+          A-Books Bookstore
+          KL University
+          Vijayawada, Andhra Pradesh 522303
+        </pre>
+          <p>Feel free to modify this as needed to suit your specific needs. Don't forget to include important
+            information like your customer service hours, email address, and social media accounts to make it easy for
+            customers to get in touch with you.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="">
+    <footer class="bg-dark text-center text-white ">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/amarkumar.pathak.98"
+            target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
+
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1"
+            href="https://twitter.com/naughtyboi58?t=sXUx9qvkyW3CfhlHoBoKgQ&s=09" target="_blank" role="button"><i
+              class="fab fa-twitter"></i></a>
+
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1"
+            href="https://www.google.com/search?rlz=1C1OPNX_enIN1016IN1016&sxsrf=AJOqlzVktFK1Z9RHdeS6WWssHKTrhUtwWw:1677836335782&q=Amar+Kumar+Pathak&stick=H4sIAAAAAAAAAOOwesSozi3w8sc9YSm5SWtOXmOU4BLzSsxLLEl0LkpNLEkNTk0sSs5wTixK4VnEKuiYm1ik4F0KIgMSSzISswGdQ8oIQAAAAA&sa=X&ved=2ahUKEwiFhqS2u7_9AhUlAbcAHVb2CMYQnJoFegQIGRAG&biw=1280&bih=569&dpr=1.5"
+            target="_blank" role="button"><i class="fab fa-google"></i></a>
+
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1"
+            href="https://instagram.com/a_m_a_r____7?igshid=NTE5MzUyOTU=" target="_blank" role="button"><i
+              class="fab fa-instagram"></i></a>
+
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1"
+            href="https://www.linkedin.com/in/amar-kumar-pathak-661a66258" target="_blank" role="button"><i
+              class="fab fa-linkedin-in"></i></a>
+
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Amar00007" target="_blank"
+            role="button"><i class="fab fa-github"></i></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <p>Copyright &copy 2023, A-Books.All Rights Reserved</p>
+
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </section>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
